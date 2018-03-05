@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListMasterPage } from '../pages/list-master/list-master';
+import { ListMasterPage } from '../pages/location-list/location-list';
 import { Items } from '../mocks/providers/items';
 import { Api } from '../providers/api/api';
 

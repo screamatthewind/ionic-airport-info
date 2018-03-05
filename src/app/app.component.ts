@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ListMasterPage } from '../pages/list-master/list-master';
+import { ListMasterPage } from '../pages/location-list/location-list';
 
 @Component({
   templateUrl: 'app.html'
