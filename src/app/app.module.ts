@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LocationListPage } from '../pages/location-list/location-list';
 import { Locations } from '../mocks/providers/locations';
+import { Contacts } from '../mocks/providers/contacts';
 import { Api } from '../providers/api/api';
 
 @NgModule({
@@ -31,6 +32,7 @@ import { Api } from '../providers/api/api';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Locations,
+    Contacts,
     Api
   ]
 })

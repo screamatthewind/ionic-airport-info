@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Location } from '../../models/location';
+import { Contact } from '../../models/contact';
 
 @Injectable()
 export class Contacts {
