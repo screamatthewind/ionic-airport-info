@@ -1,7 +1,7 @@
 import { Api } from './api/api';
-import { Items } from '../mocks/providers/items';
+import { Locations } from '../mocks/providers/locations';
 
 export {
     Api,
-    Items
+    Locations
 };

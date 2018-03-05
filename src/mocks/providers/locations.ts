@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../../models/item';
+import { Location } from '../../models/location';
 
 @Injectable()
-export class Items {
-  items: Item[] = [];
+export class Locations {
+  locations: Location[] = [];
 
   defaultItem: any = {
     "name": "Burt Bear",
@@ -11,7 +11,7 @@ export class Items {
   };
 
   constructor() {
-    let items = 
+    let locations = 
     [
       {
         "id" : "eaf2ba8d-8d7a-11e7-9fba-0a0027000006",
@@ -3843,34 +3843,34 @@ export class Items {
       }
     ];
     
-    for (let item of items) {
-      this.items.push(new Item(item));
+    for (let location of locations) {
+      this.locations.push(new Location(location));
     }
   }
 
   query(params?: any) {
     if (!params) {
-      return this.items;
+      return this.locations;
     }
 
-    return this.items.filter((item) => {
+    return this.locations.filter((location) => {
       for (let key in params) {
-        let field = item[key];
+        let field = location[key];
         if (typeof field == 'string' && field.toLowerCase().indexOf(params[key].toLowerCase()) >= 0) {
-          return item;
+          return location;
         } else if (field == params[key]) {
-          return item;
+          return location;
         }
       }
       return null;
     });
   }
 
-  add(item: Item) {
-    this.items.push(item);
+  add(location: Location) {
+    this.locations.push(location);
   }
 
-  delete(item: Item) {
-    this.items.splice(this.items.indexOf(item), 1);
+  delete(location: Location) {
+    this.locations.splice(this.locations.indexOf(location), 1);
   }
 }
