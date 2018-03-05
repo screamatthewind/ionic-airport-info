@@ -1,0 +1,8 @@
+{
+  "name": "ionic-airport-info",
+  "app_id": "2270a0ef",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
