@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Contacts</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let contact of currentItems">
+      <button ion-item (click)="openItem(contact)">
+        <h2>{{contact.contact_name}}</h2>
+        <p>{{contact.city}}, {{contact.state}}</p>
+        <ion-note contact-end *ngIf="contact.note">{{contact.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(contact)">
+          {{ 'DELETE_BUTTON' }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

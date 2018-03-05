@@ -3,6 +3,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Location } from '../../models/location';
 import { Locations } from '../../providers/providers';
+import { ContactListPage } from '../contact-list/contact-list';
 
 @IonicPage()
 @Component({
@@ -48,7 +49,7 @@ export class LocationListPage {
    * Navigate to the detail page for this location.
    */
   openItem(location: Location) {
-    this.navCtrl.push('ItemDetailPage', {
+    this.navCtrl.push('ContactListPage', {
       location: location
     });
   }
