@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListMasterPage } from '../pages/location-list/location-list';
+import { LocationListPage } from '../pages/location-list/location-list';
 import { Items } from '../mocks/providers/items';
 import { Api } from '../providers/api/api';
 
@@ -14,7 +14,7 @@ import { Api } from '../providers/api/api';
   declarations: [
     MyApp,
     HomePage,
-    ListMasterPage
+    LocationListPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,7 @@ import { Api } from '../providers/api/api';
   entryComponents: [
     MyApp,
     HomePage,
-    ListMasterPage
+    LocationListPage
   ],
   providers: [
     StatusBar,

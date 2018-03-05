@@ -10,7 +10,7 @@ import { Items } from '../../providers/providers';
   templateUrl: 'location-list.html'
 })
 
-export class ListMasterPage {
+export class LocationListPage {
   currentItems: Item[];
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
