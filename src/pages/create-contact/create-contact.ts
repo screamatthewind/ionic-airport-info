@@ -4,10 +4,10 @@ import { IonicPage, NavController, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-create-location',
-  templateUrl: 'create-location.html',
+  selector: 'page-create-contact',
+  templateUrl: 'create-contact.html',
 })
-export class CreateLocationPage {
+export class CreateContactPage {
 
   isReadyToSave: boolean;
   item: any;
@@ -15,14 +15,10 @@ export class CreateLocationPage {
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController, formBuilder: FormBuilder) {
     this.form = formBuilder.group({
-      location_name: ['', Validators.required],
-      address_1: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      zip: ['', Validators.required],
-      country_code: ['', Validators.required],
-      latitude: ['', Validators.required],
-      longitude: ['', Validators.required]
+      contact_type: ['', Validators.required],
+      contact_name: ['', Validators.required],
+      phone_number: ['', Validators.required],
+      priority: ['', Validators.required]
     });
 
     // Watch the form for changes, and
@@ -32,7 +28,7 @@ export class CreateLocationPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CreatePage');
+    console.log('ionViewDidLoad CreateContactPage');
   }
 
   cancel() {

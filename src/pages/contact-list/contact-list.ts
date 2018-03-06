@@ -38,7 +38,7 @@ export class ContactListPage {
    * modal and then adds the new contact to our data source if the user created one.
    */
   addItem() {
-    let addModal = this.modalCtrl.create('ItemCreatePage');
+    let addModal = this.modalCtrl.create('CreateContactPage');
     addModal.onDidDismiss(contact => {
       if (contact) {
         this.contacts.add(contact);
