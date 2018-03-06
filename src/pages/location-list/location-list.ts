@@ -47,9 +47,16 @@ export class LocationListPage {
   /**
    * Navigate to the detail page for this location.
    */
-  openItem(location: Location) {
+  openContact(location: Location) {
     this.navCtrl.push('ContactListPage', {
       location: location
     });
   }
+
+  openItem(location: Location) {
+    this.navCtrl.push('LocationDetailPage', {
+      location: location
+    });
+  }
+
 }

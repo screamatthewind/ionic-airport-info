@@ -16,7 +16,7 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let location of currentItems">
-      <button ion-item (click)="openItem(location)">
+      <button ion-item (tap)="openContact(location)" (press)="openItem(location)">
         <h2>{{location.location_name}}</h2>
         <p>{{location.city}}, {{location.state}}</p>
         <ion-note location-end *ngIf="location.note">{{location.note}}</ion-note>
