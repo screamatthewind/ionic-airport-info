@@ -3,7 +3,6 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Location } from '../../models/location';
 import { Locations } from '../../providers/providers';
-import { ContactListPage } from '../contact-list/contact-list';
 
 @IonicPage()
 @Component({

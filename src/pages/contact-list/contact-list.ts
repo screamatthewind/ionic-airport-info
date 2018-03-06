@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 
 import { Contact } from '../../models/contact';
 import { Contacts } from '../../providers/providers';
@@ -11,11 +11,20 @@ import { Contacts } from '../../providers/providers';
 })
 
 export class ContactListPage {
-  item: any;
-  currentItems: Contact[];
+  location: any;
+  tempContacts: Contact[];
+  currentItems: Contact[] = [];
 
-  constructor(public navCtrl: NavController, public contacts: Contacts, public modalCtrl: ModalController) {
-    this.currentItems = this.contacts.query();
+  constructor(public navCtrl: NavController, navParams: NavParams, public contacts: Contacts, public modalCtrl: ModalController) {
+    this.location = navParams.get('location');
+    this.tempContacts = this.contacts.query();
+
+    for (var contact of this.tempContacts) {
+      if (this.location.id == contact.location_id)
+        this.currentItems.push(contact);
+    }
+
+    // this.currentItems = this.contacts.query();
   }
 
   /**

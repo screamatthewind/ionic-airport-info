@@ -18,7 +18,7 @@
     <ion-item-sliding *ngFor="let contact of currentItems">
       <button ion-item (click)="openItem(contact)">
         <h2>{{contact.contact_name}}</h2>
-        <p>{{contact.city}}, {{contact.state}}</p>
+        <p>{{contact.phone_number}}</p>
         <ion-note contact-end *ngIf="contact.note">{{contact.note}}</ion-note>
       </button>
 

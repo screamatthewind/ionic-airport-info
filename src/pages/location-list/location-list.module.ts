@@ -5,13 +5,11 @@ import { LocationListPage } from './location-list';
 
 @NgModule({
   declarations: [
-    LocationListPage,
   ],
   imports: [
     IonicPageModule.forChild(LocationListPage)
   ],
   exports: [
-    LocationListPage
   ]
 })
 export class LocationListPageModule { }

@@ -11,11 +11,6 @@ import { LocationListPage } from '../pages/location-list/location-list';
 export class MyApp {
   rootPage:any = LocationListPage;
 
-  pages: any[] = [
-    { title: 'Locations', component: 'LocationListPage' },
-    { title: 'Contacts', component: 'ContactListPage' }
-  ]
-  
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
