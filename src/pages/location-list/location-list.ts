@@ -28,7 +28,7 @@ export class LocationListPage {
    * modal and then adds the new location to our data source if the user created one.
    */
   addItem() {
-    let addModal = this.modalCtrl.create('ItemCreatePage');
+    let addModal = this.modalCtrl.create('CreateLocationPage');
     addModal.onDidDismiss(location => {
       if (location) {
         this.locations.add(location);
