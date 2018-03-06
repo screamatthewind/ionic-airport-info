@@ -58,7 +58,7 @@ export class ContactListPage {
    * Navigate to the detail page for this contact.
    */
   openItem(contact: Contact) {
-    this.navCtrl.push('ItemDetailPage', {
+    this.navCtrl.push('ContactDetailPage', {
       contact: contact
     });
   }
